@@ -26,9 +26,7 @@ def decode_data(encoded_data):
 def receive():
     host, msg = e.recv()   # blocks until message arrives
     if msg:
-        print(msg)
         decoded_msg=decode_data(msg)
-        print(decoded_msg)
         return decoded_msg
 #-------------------------------------------------
 
@@ -53,4 +51,11 @@ def check_mac_adress():
 if __name__ == '__main__':
     while True:
         res=receive()
+        print('received: ',res)
+        
+        # it is still a list!
+        # print(res[0]) works as well
+        
+        
 #-------------------------------------------------
+
