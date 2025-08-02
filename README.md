@@ -1,7 +1,10 @@
 # EasyTX
 super easy to use micropython functions to let 2 esp32's talk to eachother wirelessly!
+- max 200 meters distance
+- a little over 1 ms latency
+- just a simple integration of espnow
 
-After installing (see below) you can very easily transmit and receive a list of numbers like so:
+You can very easily transmit a list of numbers:
 ```python
 from easy_transmission import transmit
 
@@ -19,7 +22,7 @@ from easy_receiver import receive
 data=receive()       # will block here until data is received, returns it in the exact same list.
 ```
 
-thats it, 2 lines is all it takes! 
+2 lines of code is all it takes
 
 
 # setup - Receiver esp32
